@@ -1,7 +1,7 @@
 Essa Repositório foi criado com a finalidade de armazenar meus arquivos referente atoda trilha do curso da Alura referente ao SLQ Com Oracle Database, irei alimentar
 o repositório conforme for concluido as etapas do curso.
 
-       ----------------------------------------------------------------------
+ <hr>
            
 SQL com o Oracle Database
 Para começar, você precisará aprender os principais comandos do Oracle, um dos bancos mais famosos no mercado.
