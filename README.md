@@ -1,5 +1,6 @@
-Essa Repositório foi criado com a finalidade de armazenar meus arquivos referente atoda trilha do curso da Alura referente ao SLQ Com Oracle Database, irei alimentar
-o repositório conforme for concluido as etapas do curso.
+<p align class="paragrafo4">
+        &ensp;Essa Repositório foi criado com a finalidade de armazenar meus arquivos referente atoda trilha do curso da Alura referente ao SLQ Com Oracle Database, irei alimentar
+o repositório conforme for concluido as etapas do curso.</p>
 
  <hr>
            
@@ -21,7 +22,7 @@ Consultas SQL no Oracle: Projeções, Seleções, Joins e Views
 CURSO
 Manipulação de dados no Oracle: comandos DML
 
-         ----------------------------------------------------------------------
+<hr>
          
 
 Consultas mais inteligentes com o PL/SQL
@@ -37,7 +38,7 @@ Oracle PL/SQL: Procedures, funções e exceções
 CURSO
 Oracle PL/SQL: dominando packages
 
-       ----------------------------------------------------------------------
+ <hr>
 
 Administrando e Otimizando o Oracle Database
 Nesta parte, você conhecerá como é o trabalho do dia a dia de um/uma profissional responsável por gerenciar, configurar, monitorar e atualizar um banco de
