@@ -1,0 +1,86 @@
+-- CRIANDO A TABELA PRODUTOS
+CREATE TABLE produtos (
+    codigo      VARCHAR(10) NOT NULL,
+    descritor   VARCHAR(100) NULL,
+    sabor       VARCHAR(50) NULL,
+    tamanho     VARCHAR(50) NULL,
+    embalagem   VARCHAR(50) NULL,
+    preco_lista FLOAT NULL,
+    PRIMARY KEY ( codigo )
+);
+    
+-- CRIANDO A TABELA VENDEDORES
+CREATE TABLE vendedores (
+    matricula      VARCHAR(5) NOT NULL,
+    nome           VARCHAR(100) NULL,
+    bairro         VARCHAR(50) NULL,
+    comissao       VARCHAR(50) NULL,
+    data_adimissao DATE NULL,
+    ferias         INTEGER NULL,
+    PRIMARY KEY ( matricula )
+);
+ALTER TABLE vendedores RENAME COLUMN data_adimissao TO data_admissao;
+
+-- CRIANDO A TABELA EMPRESA
+CREATE TABLE tab_empresa (
+    cod_empresa  VARCHAR(5),
+    nome_empresa VARCHAR(50),
+    PRIMARY KEY ( cod_empresa )
+);
+
+-- CRIANDO A TABELA DE DEPARTAMENTO
+CREATE TABLE tab_departamento (
+    cod_departamento    VARCHAR(5),
+    nome_departamento   VARCHAR(50),
+    cidade_departamento VARCHAR(50),
+    cod_empresa         VARCHAR(5),
+    PRIMARY KEY ( cod_departamento )
+);
+
+-- CRIANDO A TABELA DE PROJETOS
+CREATE TABLE tab_projeto (
+    cod_projeto         VARCHAR(5),
+    nome_projeto        VARCHAR(50),
+    orcamento_projeto   FLOAT,
+    data_inicio_projeto DATE,
+    cod_departamento    VARCHAR(5),
+    PRIMARY KEY ( cod_projeto )
+);
+
+-- CRIANDO A TABELA DE VENDAS
+CREATE TABLE tabela_de_vendas (
+    numero     VARCHAR(5) NOT NULL,
+    data_venda DATE NULL,
+    cpf        VARCHAR(11) NOT NULL,
+    matricula  VARCHAR(5) NOT NULL,
+    imposto    float NULL,
+    PRIMARY KEY ( numero )
+);
+
+-- CRIANDO A CHAVE SECUNDÁRIA CPF
+ALTER TABLE tabela_de_vendas
+    ADD CONSTRAINT fk_clientes FOREIGN KEY ( cpf )
+        REFERENCES clientes ( cpf );
+
+-- CRIANDO A CHAVE SECUNDÁRIA MATRICULA
+ALTER TABLE tabela_de_vendas
+    ADD CONSTRAINT fk_vendedores FOREIGN KEY ( matricula )
+        REFERENCES vendedores ( matricula );
+        
+-- CRIANDO A TABELA ITENS_NOTAS     
+CREATE TABLE itens_notas (
+    numero     VARCHAR(5) NOT NULL,
+    codigo     VARCHAR(10) NOT NULL,
+    quantidade INTEGER NULL,
+    preco      FLOAT,
+    PRIMARY KEY ( numero,
+                  codigo )
+);
+
+-- CRIANDO A CHAVE SECUNDÁRIA CODIGO
+ALTER TABLE itens_notas
+    ADD CONSTRAINT fk_notas FOREIGN KEY ( numero )
+        REFERENCES produtos ( codigo );
+
+
+
