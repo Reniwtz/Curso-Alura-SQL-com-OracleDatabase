@@ -1,4 +1,4 @@
-# Treinamento-SQL-com-OracleDatabase
+# Treinando-SQL-com-OracleDatabase
 
 Essa Repositório foi criado com a finalidade de armazenar meus arquivos referente atoda trilha do curso da Alura referente ao SLQ Com Oracle Database, irei alimentar
 o repositório conforme for concluido as etapas do curso, abaixo pode ser visto algumas informações a respeito do curso.
